@@ -15,13 +15,14 @@ class CreateInfoUsersTable extends Migration
     {
         Schema::create('info_users', function (Blueprint $table) {
             // $table->id();
+            // foreign key ref
             $table->unsignedBigInteger("user_id");
-            $table->string("phone", 20);
+            $table->string("phone", 25);
             $table->string("address");
             $table->string("avatar");
             // $table->timestamps();
 
-            // RELATION
+            // RELATIONSHIP
             $table->foreign("user_id")->references("id")->on("users");
         });
     }

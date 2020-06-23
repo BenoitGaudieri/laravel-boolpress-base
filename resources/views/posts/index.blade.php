@@ -10,6 +10,20 @@
             <h4>Created: {{$post->created_at}}, Last modified: {{ $post->updated_at }}</h4>
             <p>{{ $post->body }}</p>
         </article>
+        {{-- @if ($post->comments > 0) --}}
+            <div class="comments text-secondary">
+                <span>Comments:</span>
+                <ul>
+                    @foreach ($post->comments as $comment)
+                    <li>
+                        <p>{{$comment->body}}</p>
+                    </li>
+                    
+                    @endforeach
+                    
+                </ul>
+            </div>
+        {{-- @endif --}}
 
         @if (! $loop->last)
             {{-- This is NOT the last iteration --}}

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 // Model
 use App\Post;
+use App\Comment;
 
 
 class PostController extends Controller
@@ -21,8 +22,9 @@ class PostController extends Controller
 
         // Pagination
         $posts = Post::paginate(5);
+        $comments = Comment::all();
 
-        return view("posts.index", compact("posts"));
+        return view("posts.index", compact("posts", "comments"));
     }
 
     /**

@@ -4,11 +4,11 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Comment extends Model
 {
     protected $fillable = [
         "user_id",
-        "title",
+        "post_id",
         "body",
     ];
 
@@ -20,10 +20,9 @@ class Post extends Model
     {
         return $this->belongsTo("App\User");
     }
-
-    // comments
-    public function comments()
+    // post
+    public function post()
     {
-        return $this->hasMany("App\Comment");
+        return $this->belongsTo("App\Post");
     }
 }
