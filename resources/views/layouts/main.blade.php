@@ -1,6 +1,6 @@
 @include('shared.header')
 
-<section class="container">
+<section class="container pb-5">
     @yield('content')
 </section>
 

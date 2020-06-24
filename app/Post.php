@@ -10,6 +10,7 @@ class Post extends Model
         "user_id",
         "title",
         "body",
+        "slug",
     ];
 
     /**
@@ -25,5 +26,11 @@ class Post extends Model
     public function comments()
     {
         return $this->hasMany("App\Comment");
+    }
+
+    // tags
+    public function tags()
+    {
+        return $this->belongsToMany("App\Tag");
     }
 }

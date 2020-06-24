@@ -11,14 +11,23 @@
 
 </head>
 <body>
-    <header>
+    <header class="mb-5">
         <nav class="navbar navbar-expand navbar-light bg-light">
-            <div class="nav-brand">Boolpress - DB Extravaganza</div>
+            <a href="{{route("home")}}" class="navbar-brand">Boolpress - DB Extravaganza</a>
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item"><a class="nav-link" href="{{route("home")}}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route("users.index")}}">Users</a></li>
-                <li class="nav-item"><a class="nav-link" href="{{route("posts.index")}}">Post Archive</a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route("home")}}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route("users.index")}}">Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route("posts.index")}}">Post Archive</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route("posts.create")}}">New Post</a>
+                </li>
             </ul>
         </nav>
 
